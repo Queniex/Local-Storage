@@ -24,6 +24,38 @@
         text-underline-offset: 0.5em;
     }
 
+    input{
+        padding: 7px;
+        height: 35px;
+    }
+
+    button{
+        padding: 5px;
+        border: 1px solid black;
+        background-color: rgb(0, 0, 0);
+        color: white;
+    }
+
+    button:hover{
+        background-color: white;
+        color: black;
+    }
+
+    .b{
+        text-decoration: underline;
+        text-underline-offset: 0.5em;
+        text-decoration-color: gray;
+    }
+
+    .a{
+        margin-top: 2px;
+        background-color: pink;
+    }
+
+    .spasi{
+        margin-bottom: 10px;
+    }
+
 </style>
 
 <!-- CSS only -->
@@ -36,17 +68,19 @@
     
     <div class="container">
         <div>
-            <h1 class="mb-3 mt-5">Local Storage Testing</h1>
+            <h1 class="mb-3 mt-5">Local Storage Testing🧐</h1>
         </div>
         <div>
             <fieldset class="box1">
-                <legend>Insert Data</legend>
+                <legend><span class="b">Insert Data</span></legend>
+                <div class="spasi"></div>
                 <input id="inpKey" type="text" placeholder="Enter Key...">
                 <input id="inpValue" type="text" placeholder="Enter Value..">
                 <button id="btnInsert">Insert Data</button>
             </fieldset>
             <fieldset class="box2">
-                <legend>Local Storage</legend>
+                <legend><span class="b">Local Storage</span></legend>
+                <div class="spasi"></div>
                 <div id="lsOutput"></div>
             </fieldset>
         </div>
@@ -81,7 +115,7 @@
             const key = localStorage.key(i);
             const value = localStorage.getItem(key);
     
-            lsOutput.innerHTML += `${key} : ${value} </br>`;
+            lsOutput.innerHTML += `- <span class="a">${key} </span> : ${value} </br>`;
         }
     
     </script>
