@@ -9,6 +9,10 @@
     <script>
         tailwind.config = {
           theme: {
+            container: {
+              center: true,
+              padding: '16px'
+            },
             extend: {
               colors: {
                 clifford: '#da373d',
@@ -18,14 +22,113 @@
         }
       </script>
       <style type="text/tailwindcss">
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Dosis:wght@500&family=Luckiest+Guy&family=Poppins:ital,wght@0,300;0,500;0,600;0,800;0,900;1,600&display=swap');
         @layer utilities {
           .content-auto {
             content-visibility: auto;
           }
+
+          /* *{
+            border: red 1px solid;
+          } */
+
         }
       </style>
 </head>
-<body>
-    
+<body class="bg-black">
+    <div class="container h-[75vh]">
+        <div class=" justify-center mt-[20vh] grid place-items-center">
+            <h1 class="font-medium text-3xl underline decoration-gray-300 text-white"> My Local Storage Project List</h1>
+            <div class="grid mt-10 grid-rows-3 grid-flow-col gap-11">
+
+                <div>
+                        <a href="project/project1.html" class="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-bold rounded-full group">
+                        <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
+                        <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8"></span>
+                        <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">#Project 1</span>
+                        <span class="absolute inset-0 border-2 border-white rounded-full"></span>
+                        </a>
+                </div>
+
+                <div>
+                        <a href="#_" class="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-bold rounded-full group">
+                        <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
+                        <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8"></span>
+                        <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">#Project 2</span>
+                        <span class="absolute inset-0 border-2 border-white rounded-full"></span>
+                        </a>
+                </div>
+
+                <div>
+                        <a href="#_" class="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-bold rounded-full group">
+                        <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
+                        <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8"></span>
+                        <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">??????????</span>
+                        <span class="absolute inset-0 border-2 border-white rounded-full"></span>
+                        </a>
+                </div>
+
+                <div>
+                    <a href="#_" class="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-bold rounded-full group">
+                    <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
+                    <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8"></span>
+                    <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">??????????</span>
+                    <span class="absolute inset-0 border-2 border-white rounded-full"></span>
+                    </a>
+                </div>
+
+                <div>
+                        <a href="#_" class="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-bold rounded-full group">
+                        <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
+                        <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8"></span>
+                        <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">??????????</span>
+                        <span class="absolute inset-0 border-2 border-white rounded-full"></span>
+                        </a>
+                </div>
+
+                <div>
+                        <a href="#_" class="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-bold rounded-full group">
+                        <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
+                        <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8"></span>
+                        <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">??????????</span>
+                        <span class="absolute inset-0 border-2 border-white rounded-full"></span>
+                        </a>
+                </div>
+
+                <div>
+                    <a href="#_" class="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-bold rounded-full group">
+                    <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
+                    <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8"></span>
+                    <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">??????????</span>
+                    <span class="absolute inset-0 border-2 border-white rounded-full"></span>
+                    </a>
+                </div>
+
+                <div>
+                        <a href="#_" class="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-bold rounded-full group">
+                        <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
+                        <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8"></span>
+                        <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">??????????</span>
+                        <span class="absolute inset-0 border-2 border-white rounded-full"></span>
+                        </a>
+                </div>
+
+                <div>
+                        <a href="#_" class="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-bold rounded-full group">
+                        <span class="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
+                        <span class="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8"></span>
+                        <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">??????????</span>
+                        <span class="absolute inset-0 border-2 border-white rounded-full"></span>
+                        </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="h-[5vh] w-[100vw] grid place-items-center bg-white">
+        <a href="https://github.com/Queniex" class="hover:text-gray-500 hover:text-sm">&copy; Queniex - Fildzah Marissa</a>
+    </div>
 </body>
 </html>
