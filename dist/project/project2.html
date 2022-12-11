@@ -37,6 +37,7 @@
   </head>
   <body id="body" class="">
     <div class="container">
+
         <div class="grid justify-end">
             <button class="mt-5 w-20 h-10 rounded-full bg-slate-200 flex items-center transition duration-300 focus:outline-none shadow"
             onclick="toggleTheme()">
@@ -49,10 +50,20 @@
                 </div>
             </button>
         </div>
+
+        <div class="grid justify-center mt-16 mb-16">
+          <div id="theme" class="text-center text-6xl">WELCOME!</div>
+          <div class="text-center"><span id="theme2">You're using </span><span id="mode" class="text-[pink] underline decoration-pink-500 underline-offset-4 font-bold"></span></div>
+          <div ><img width="450px" src="../images/juicy-multitasking.gif" alt=""></div>
+          <a href="../../index.html" class="text-[#ff4372] text-center hover:text-red-200">Back</a>
+        </div>
+
     </div>
 
     <script>
       const switchToggle = document.querySelector("#switch-toggle");
+      const switchToggle2 = document.querySelector("#theme");
+      const switchToggle3 = document.querySelector("#theme2");
       const body = document.querySelector("#body");
       let isDarkmode = false;
 
@@ -75,18 +86,28 @@
         if (isDarkmode) {
           switchToggle.classList.remove("bg-yellow-500", "-translate-x-2");
           switchToggle.classList.add("bg-gray-700", "translate-x-full");
+          switchToggle2.classList.add("text-white");
+          switchToggle2.classList.remove("text-black");
+          switchToggle3.classList.add("text-white");
+          switchToggle3.classList.remove("text-black");
           body.classList.remove("bg-white");
           body.classList.add("bg-black");
           localStorage.setItem("PageTheme", "dark");
+          document.getElementById("mode").innerHTML = "Dark Mode Theme";
           setTimeout(() => {
             switchToggle.innerHTML = darkIcon;
           }, 250);
         } else {
           switchToggle.classList.add("bg-yellow-500", "-translate-x-2");
           switchToggle.classList.remove("bg-gray-700", "translate-x-full");
+          switchToggle2.classList.remove("text-white");
+          switchToggle2.classList.add("text-black");
+          switchToggle3.classList.add("text-black");
+          switchToggle3.classList.remove("text-white");
           body.classList.add("bg-white");
           body.classList.remove("bg-black");
           localStorage.removeItem("PageTheme");
+          document.getElementById("mode").innerHTML = "Light Mode Theme";
           setTimeout(() => {
             switchToggle.innerHTML = lightIcon;
           }, 250);
