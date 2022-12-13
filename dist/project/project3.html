@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/18f9d23341.js" crossorigin="anonymous"></script>
     <title>Todo List</title>
     <script>
       tailwind.config = {
@@ -53,55 +54,28 @@
                 <!-- Form Input -->
                 <div class="w-[25vw] h-[10vh] absolute top-10 left-[66px] bg-slate-100 rounded-[56px] flex">
                     <div class="rounded-l-[56px] w-[20vw]">
-                        <input type="text" class="p-2 rounded-l-[56px] w-[20vw] h-[10vh]" placeholder="Input text....">
+                        <input type="text" required id="input" class="p-2 rounded-l-[56px] w-[20vw] h-[10vh]" placeholder="Input text....">
                     </div>
                     <button class="rounded-r-[56px] w-[5vw] bg-[pink] hover:bg-[#DBA39A] hover:ring-[pink] hover:ring-2"></button>
                 </div>
 
                 <!-- Isi Form -->
-                <div class="w-[30vw] h-[45vh] grid place-items-start overflow-y-scroll mt-6">
-                    <div class="w-[28vw] h-[8vh] ml-1 mb-1 bg-white flex">
-                        <div class="ml-2 w-[20vw] mt-2">Make a dumb web hehehehehehheh</div>
+                <div id="text" class="w-[30vw] h-[45vh] grid place-content-start overflow-y-scroll mt-6">
+                    <!-- <div class="w-[28vw] h-[8vh] ml-1 mb-1 bg-white flex">
+                        <div class="ml-2 w-[20vw] mt-2"></div>
                         <div class="w-[8vw] mt-2">
-                            <button class="ml-2 bg-[green]">check</button>
-                            <button class="bg-[red]">delete</button>
+                            <button class="ml-5 pl-2 pr-2 bg-[green]"><i class="fa fa-check" aria-hidden="true"></i></button>
+                            <button class="bg-[red] ml-2 pl-2 pr-2"><i class="fa-solid fa-trash"></i></button>
                         </div>
                     </div>
+
                     <div class="w-[28vw] h-[8vh] ml-1 mb-1 bg-white flex">
-                        <div class="ml-2 w-[20vw] mt-2">Make a dumb web hehehehehehheh</div>
+                        <div class="ml-2 w-[20vw] mt-2"></div>
                         <div class="w-[8vw] mt-2">
-                            <button class="ml-2 bg-[green]">check</button>
-                            <button class="bg-[red]">delete</button>
+                            <button class="ml-5 pl-2 pr-2 bg-[green]"><i class="fa fa-check" aria-hidden="true"></i></button>
+                            <button class="bg-[red] ml-2 pl-2 pr-2"><i class="fa-solid fa-trash"></i></button>
                         </div>
-                    </div>
-                    <div class="w-[28vw] h-[8vh] ml-1 mb-1 bg-white flex">
-                        <div class="ml-2 w-[20vw] mt-2">Make a dumb web hehehehehehheh</div>
-                        <div class="w-[8vw] mt-2">
-                            <button class="ml-2 bg-[green]">check</button>
-                            <button class="bg-[red]">delete</button>
-                        </div>
-                    </div>
-                    <div class="w-[28vw] h-[8vh] ml-1 mb-1 bg-white flex">
-                        <div class="ml-2 w-[20vw] mt-2">Make a dumb web hehehehehehheh</div>
-                        <div class="w-[8vw] mt-2">
-                            <button class="ml-2 bg-[green]">check</button>
-                            <button class="bg-[red]">delete</button>
-                        </div>
-                    </div>
-                    <div class="w-[28vw] h-[8vh] ml-1 mb-1 bg-white flex">
-                        <div class="ml-2 w-[20vw] mt-2">Make a dumb web hehehehehehheh</div>
-                        <div class="w-[8vw] mt-2">
-                            <button class="ml-2 bg-[green]">check</button>
-                            <button class="bg-[red]">delete</button>
-                        </div>
-                    </div>
-                    <div class="w-[28vw] h-[8vh] ml-1 mb-1 bg-white flex">
-                        <div class="ml-2 w-[20vw] mt-2">Make a dumb web hehehehehehheh</div>
-                        <div class="w-[8vw] mt-2">
-                            <button class="ml-2 bg-[green]">check</button>
-                            <button class="bg-[red]">delete</button>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- Copyright -->
@@ -111,5 +85,30 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#input').change(function(){
+                var input = $(this).val();
+                $('#text').append(
+                    '<div>' +
+                    '<div id="a" class="w-[28vw] h-[8vh] ml-1 mb-1 bg-white flex">' + 
+                    '<div class="ml-2 w-[20vw] mt-2">' + input + '</div>' +
+                    '<div class="w-[8vw] mt-2">' + 
+                    '<button id="btnTrash" class="ml-5 pl-2 pr-2 bg-[green]"><i class="fa fa-check" aria-hidden="true"></i></button>' + 
+                    '<button id="trash" class="bg-[red] ml-2 pl-2 pr-2"><i class="fa-solid fa-trash"></i></button>' +
+                    '</div>' + 
+                    '</div>' + '</div>'
+                );
+                $(this).val('');
+            });
+
+            $('button').on('click', function(){
+                $(this).parent('#a').addClass("hidden");
+                console.log("hehe");
+            });
+        })
+    </script>
+
 </body>
 </html>
