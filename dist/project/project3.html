@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <title>Todo List</title>
     <script>
       tailwind.config = {
@@ -34,7 +35,81 @@
       }
     </style>
 </head>
-<body>
-    
+<body class="bg-[#DBA39A]">
+    <div class="container mt-4">
+        <div class="judul">To do List Web | <span class="bg-black text-white pl-2 pr-2 hover:bg-[white] hover:text-black"><a href="">back</a></span></div>
+        <div class="w-[12vw] bg-white h-[1px]"></div>
+        <div class="grid place-items-center">
+            <div class="h-[5vh] w-[10vw] text-white flex justify-center">
+                <div class="w-[35px] mr-2 bg-black rounded-t-[100%] flex justify-end">
+                    <div class="h-[50%] w-[20px] bg-white rounded-t-[100%]"></div>
+                </div>
+                <div class="w-[35px] ml-2 bg-black rounded-t-[100%] flex justify-start">
+                    <div class="h-[50%] w-[20px] bg-white rounded-t-[100%]"></div>
+                </div>
+            </div>
+            <div class="h-[80vh] bg-black w-[35vw] rounded-[152px] grid place-items-center relative">
+
+                <!-- Form Input -->
+                <div class="w-[25vw] h-[10vh] absolute top-10 left-[66px] bg-slate-100 rounded-[56px] flex">
+                    <div class="rounded-l-[56px] w-[20vw]">
+                        <input type="text" class="p-2 rounded-l-[56px] w-[20vw] h-[10vh]" placeholder="Input text....">
+                    </div>
+                    <button class="rounded-r-[56px] w-[5vw] bg-[pink] hover:bg-[#DBA39A] hover:ring-[pink] hover:ring-2"></button>
+                </div>
+
+                <!-- Isi Form -->
+                <div class="w-[30vw] h-[45vh] grid place-items-start overflow-y-scroll mt-6">
+                    <div class="w-[28vw] h-[8vh] ml-1 mb-1 bg-white flex">
+                        <div class="ml-2 w-[20vw] mt-2">Make a dumb web hehehehehehheh</div>
+                        <div class="w-[8vw] mt-2">
+                            <button class="ml-2 bg-[green]">check</button>
+                            <button class="bg-[red]">delete</button>
+                        </div>
+                    </div>
+                    <div class="w-[28vw] h-[8vh] ml-1 mb-1 bg-white flex">
+                        <div class="ml-2 w-[20vw] mt-2">Make a dumb web hehehehehehheh</div>
+                        <div class="w-[8vw] mt-2">
+                            <button class="ml-2 bg-[green]">check</button>
+                            <button class="bg-[red]">delete</button>
+                        </div>
+                    </div>
+                    <div class="w-[28vw] h-[8vh] ml-1 mb-1 bg-white flex">
+                        <div class="ml-2 w-[20vw] mt-2">Make a dumb web hehehehehehheh</div>
+                        <div class="w-[8vw] mt-2">
+                            <button class="ml-2 bg-[green]">check</button>
+                            <button class="bg-[red]">delete</button>
+                        </div>
+                    </div>
+                    <div class="w-[28vw] h-[8vh] ml-1 mb-1 bg-white flex">
+                        <div class="ml-2 w-[20vw] mt-2">Make a dumb web hehehehehehheh</div>
+                        <div class="w-[8vw] mt-2">
+                            <button class="ml-2 bg-[green]">check</button>
+                            <button class="bg-[red]">delete</button>
+                        </div>
+                    </div>
+                    <div class="w-[28vw] h-[8vh] ml-1 mb-1 bg-white flex">
+                        <div class="ml-2 w-[20vw] mt-2">Make a dumb web hehehehehehheh</div>
+                        <div class="w-[8vw] mt-2">
+                            <button class="ml-2 bg-[green]">check</button>
+                            <button class="bg-[red]">delete</button>
+                        </div>
+                    </div>
+                    <div class="w-[28vw] h-[8vh] ml-1 mb-1 bg-white flex">
+                        <div class="ml-2 w-[20vw] mt-2">Make a dumb web hehehehehehheh</div>
+                        <div class="w-[8vw] mt-2">
+                            <button class="ml-2 bg-[green]">check</button>
+                            <button class="bg-[red]">delete</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="w-[20vw] text-white h-[5vh] absolute bottom-10 grid place-items-center">
+                    <a href="" class="pl-2 pr-2 hover:text-[pink]">Copyright Queniex</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
